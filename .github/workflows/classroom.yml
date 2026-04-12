@@ -19,7 +19,7 @@ jobs:
       with:
         test-name: tests
         setup-command: pip install pytest
-        command: pytest tests/ -v
+        command: PYTHONPATH=src pytest tests/ -v
         timeout: 30
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
