@@ -21,6 +21,9 @@ Ability to save health record data to a JSON file, load existing data and displa
 
 * No external dependencies for Oblig 2
 
+### Missing
+I ran out of time and didnt manage to write tests, will be able to do it on a potential 2nd submission.
+
 ## Author
 
 Mohammad Nasir Amin (s374945)

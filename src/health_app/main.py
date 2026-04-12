@@ -93,9 +93,10 @@ def menu():
             save(records)
             print("Saved to file. Exiting now....bye.")
             break
-
         else:
             print("Invalid option, please select a number between 1 - 4.")
+
+
 
 
 def main():
