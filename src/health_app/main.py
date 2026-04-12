@@ -12,15 +12,15 @@ def menu():
         2. View All Records
         3. View Statistics
         4. Save & Quit
-        )""")
+        """)
 
         option = input("Enter your choice (1-4): ")
 
         if option == "1":
             print("-- 1. Add Health Record --\n")
 
-            validation = True
-            while validation:
+            flag = True
+            while flag:
                 while True:
                     name = input("Enter name: ")
                     if name == "":
@@ -59,7 +59,7 @@ def menu():
 
                 prompt = input("Do you want to add another person? y/n").lower()
                 if prompt != "y":
-                    validation = False
+                    flag = False
 
         elif option == "2":
             print("-- 2. View All Records --\n")
@@ -68,7 +68,7 @@ def menu():
                 continue
 
             for person in records:
-                weight_difference: float = person.weight_kg - person.get_ideal_weight()
+                weight_difference: float = round((person.weight_kg - person.get_ideal_weight()), 2)
                 weight_format = ""
                 if weight_difference > 0:
                    weight_format += "+" + str(weight_difference)

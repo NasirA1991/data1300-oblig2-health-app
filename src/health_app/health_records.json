@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Nasir",
+    "weight_kg": 98.0,
+    "height_m": 1.85,
+    "calculated_bmi": 28.63
+  },
+  {
+    "name": "Shoaib",
+    "weight_kg": 75.0,
+    "height_m": 1.78,
+    "calculated_bmi": 23.67
+  },
+  {
+    "name": "Hilde",
+    "weight_kg": 150.0,
+    "height_m": 1.43,
+    "calculated_bmi": 73.35
+  },
+  {
+    "name": "Malik",
+    "weight_kg": 53.0,
+    "height_m": 1.88,
+    "calculated_bmi": 15.0
+  }
+]
