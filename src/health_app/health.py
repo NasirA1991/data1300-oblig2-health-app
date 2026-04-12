@@ -1,7 +1,7 @@
 import math
 
 class Health:
-    def __init__(self, name, weight_kg, height_m):
+    def __init__(self, name: str, weight_kg: float, height_m: float):
         if name == "":
             raise ValueError("Please input a name (required).")
         self.name = name
@@ -15,11 +15,11 @@ class Health:
         self.height_m = height_m
 
 
-    def calculate_bmi(self):
+    def calculate_bmi(self) -> float:
         bmi = self.weight_kg / math.pow(self.height_m, 2)
         return round(bmi, 2)
 
-    def category_bmi(self):
+    def category_bmi(self) -> str:
         bmi = self.calculate_bmi()
 
         if bmi < 18.5:
@@ -31,7 +31,7 @@ class Health:
         else:
             return "Obese"
 
-    def get_health_advice(self):
+    def get_health_advice(self) -> str:
         category = self.category_bmi()
         advice = ""
 
@@ -46,5 +46,5 @@ class Health:
 
         return advice
 
-    def get_ideal_weight(self):
+    def get_ideal_weight(self) -> float:
         return round((22 * math.pow(self.height_m, 2)), 1)

@@ -18,7 +18,7 @@ def save(records):
         json.dump(data, f, indent=2)
 
 
-def read(file):
+def read(file: str):
     try:
         with open(file, "r") as f:
             data = json.load(f)
@@ -35,7 +35,7 @@ def read(file):
     except FileNotFoundError:
         return []
 
-def get_statistics(file):
+def get_statistics(file: str) -> dict:
     records = read(file)
     total_records = len(records)
     bmi_cumulative = 0
@@ -47,7 +47,7 @@ def get_statistics(file):
 
     avg_bmi = round((bmi_cumulative / total_records), 2)
     category_distribution = Counter(categories)
-    most_common_category = category_distribution.most_common(1)
+    most_common_category = category_distribution.most_common(1)[0][0]
 
 
     return {
