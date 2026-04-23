@@ -3,7 +3,7 @@ from health_app.health import Health
 from collections import Counter
 
 
-def save(records):
+def save(records, file="health_records.json"):
     data = []
     for record in records:
         item = {
@@ -14,11 +14,11 @@ def save(records):
         }
         data.append(item)
 
-    with open("health_records.json", "w") as f:
+    with open(file, "w") as f:
         json.dump(data, f, indent=2)
 
 
-def read(file: str):
+def read(file="health_records.json"):
     try:
         with open(file, "r") as f:
             data = json.load(f)
@@ -35,7 +35,7 @@ def read(file: str):
     except FileNotFoundError:
         return []
 
-def get_statistics(file: str) -> dict:
+def get_statistics(file="health_records.json") -> dict:
     records = read(file)
     total_records = len(records)
     bmi_cumulative = 0

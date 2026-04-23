@@ -2,6 +2,7 @@ import math
 
 class Health:
     def __init__(self, name: str, weight_kg: float, height_m: float):
+        name = name.strip()
         if name == "":
             raise ValueError("Please input a name (required).")
         self.name = name
